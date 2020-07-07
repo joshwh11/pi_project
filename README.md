@@ -24,6 +24,8 @@ Steps to reproduce:
 
 (Pictures for reference are in the repository)
 
-6. Test out pins by running the ledtest.py file
+6. Test out pins by running the ledtest.py file after changing directory to the pi_project folder
 
+    ```cd pi_project```
+    
     ```python3 ledtest.py```
