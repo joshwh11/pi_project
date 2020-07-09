@@ -11,6 +11,7 @@ Steps to reproduce:
 * ```sudo apt install python3-pip```
 * ```sudo apt install git vim -y```
 * ```pip3 install RPi.GPIO```
+* ```pip3 install requests```
 
 4. Clone git repository to Pi:
 
