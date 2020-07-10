@@ -7,10 +7,10 @@ app = Flask(__name__)
 api = Api(app,
           version='1.0',
           title='RESTful Pi',
-          description='A RESTful API to control the GPIO pins of a Raspbery Pi',
-          doc='/docs')
+          description='API to control GPIO pins',
+          doc='/doc')
 
-ns = api.namespace('pins', description='Pin related operations')
+ns = api.namespace('pins', description='Pin ops')
 
 pin_model = api.model('pins', {
     'id': fields.Integer(readonly=True, description='The pin unique identifier'),
