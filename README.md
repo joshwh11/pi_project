@@ -23,7 +23,7 @@ Steps to reproduce:
 * 2x LED Pins (1 red, 1 yellow)
 * 2x 220Ω Resistors 
 
-    (Super rough diagrams for reference are in the repository)
+    (Super rough diagrams for reference are in the "schematic" folder)
 
 6. Test out pins by running the ledtest.py file after changing directory to the pi_project folder
 
