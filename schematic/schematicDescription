@@ -2,7 +2,8 @@ The red/yellow circles represent the LED pins. The left side is the cathode, the
 
 The resistors should be placed with one side in the same column as an anode, and the other connecting to the blue (negative) rail of the breadboard.
 
-The orange wires connect the cathodes of the LED pins the same way as the resistors connecting to the anodes, but the female end should connect to a specific
-part of the Raspberry Pi. The yellow LED's cathode should connect to the 9th pin from the left on the top of the Pi, and the red LED to the 6th from the left.
+The orange wires connect the cathodes of the LED pins the same way as the resistors connecting to the anodes, but the female end should connect to a specific part 
+of the Raspberry Pi. The yellow LED's cathode should connect (via jumper wire) to the 9th pin from the left on the top of the Pi, and the red LED to the 6th from 
+the left.
 
 Finally, the gray wire connects the negative (blue) rail of the breadboard to the Ground pin on the Pi, or the 3rd from the left.
