@@ -44,7 +44,7 @@ Steps to reproduce:
     
     This should turn on the red pin. To turn off, replace "on" with "off"
 
-8. Set up port forwarding on laptop. Open another terminal tab of your local machine, not the RPi. Run command:
+8. Set up port forwarding on laptop/local machine. Open another terminal tab of your local machine, not the RPi. Run command:
 
     ```ssh -Nf -L localhost:9999:localhost:5000 pi@raspberrypi.local```
     
@@ -52,4 +52,10 @@ Steps to reproduce:
     
     **NOTE: In the script, you must change the URL to be 'http://localhost:9999/pins/' since the app is now listening on port 9999**
     
-    You can now control the lights via requests on your laptop.
+    You can now control the lights via requests on your laptop. In order to stop the SSH port forward, from your local machine run
+    
+    ```ps aux | grep ssh```
+    
+    Which will give you a list of SSH processes. Find the port forward process and it's ID, then use
+    
+    ```kil <id>```
