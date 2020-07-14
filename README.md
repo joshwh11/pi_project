@@ -38,7 +38,8 @@ Steps to reproduce:
 
     You should see the app running. This will stay running as it is the way the Raspberry Pi listens for requests to change the state of the pins.
     Now open another tab in terminal and SSH back into the RPi. Navigate again to the pi_project folder and run the requestscript.py file by passing the pin ID and 
-    the new state of the pin as arguments in terminal. The format for the command should be: python3 requestscript.py \<pin id> \<new pin state>
+    the new state of the pin as arguments in terminal. The requestscript.py script is a simple patch request that updates a LED pin's state. For this, we need the 
+    pin ID and the pin's new state. The format for the command should be: python3 requestscript.py \<pin id> \<new pin state>
     
     Example format:
     
