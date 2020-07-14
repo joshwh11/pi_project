@@ -61,4 +61,4 @@ Steps to reproduce:
     
     Which will give you a list of SSH processes. Find the port forward process and it's ID, then use
     
-    ```kil <id>```
+    ```kill <id>```
