@@ -49,7 +49,7 @@ Steps to reproduce:
 
 8. Set up port forwarding on laptop/local machine. Open another terminal tab of your local machine, not the RPi. Run command:
 
-    ```ssh -Nf -L localhost:9999:localhost:5000 pi@raspberrypi.local```
+    ```ssh -Nf -L localhost:9999:localhost:5000 pi@<RPi IP address>```
     
     Now any request made to the local machine on port 9999 will be routed to the RPi on port 5000. Test by running requestscript.py on your local machine.
     
