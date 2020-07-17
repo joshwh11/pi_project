@@ -46,4 +46,5 @@ Steps to reproduce:
    
    ```python3 checkHealth.py```
    
-   Now the RPi will constantly checking the contents of your syntheticHealth.txt file and should update the LED pin state given the content of the file.
+   Now the RPi will constantly check the contents of your syntheticHealth.txt file hosted on your GitHub repo and will update the LED pin state given the content
+   of the file.
