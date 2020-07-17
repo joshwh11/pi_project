@@ -42,7 +42,7 @@ Steps to reproduce:
 8. Set up AppDynamics policy and action.
     
 9. To update the LED pins, the RPi will be continuously running the checkHealth.py application as AppDynamics updates the syntheticHealth.txt file via policy 
-   triggers. On your RPi, navigate to pi_project on your RPi and run checkHealth.py via
+   triggers. On your RPi, navigate to pi_project and run checkHealth.py via
    
    ```python3 checkHealth.py```
    
