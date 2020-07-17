@@ -12,6 +12,8 @@ Steps to reproduce:
 * ```sudo apt install git vim -y```
 * ```pip3 install RPi.GPIO```
 * ```pip3 install requests```
+* ```pip3 install json```
+* ```pip3 install base64```
 
 4. Clone git repository to RPi:
 
@@ -31,34 +33,17 @@ Steps to reproduce:
     
     ```python3 ledtest.py```
     
-7. You can also test the app and the request. Install requirements and run the app.py file by executing commands
-    
-* ```pip3 install -r requirements.txt```
-* ```python3 app.py```
+7. Now that the lights are working, let's set up a GitHub repository to hold the file that AppDynamics will update if a policy is triggered. Create an account if
+   you do not already have one and create a repo with one file named "syntheticHealth.txt" that contains simply a 0. 0 will be the default "off" state of the LED. 
+   If a policy is triggered, AppDynamics will update the file to a 1, or "on" state. Also, you will need a token to authenticate any request to update a GitHub 
+   file. To generate a token, click on the icon drop-down at the top right of GitHub page after logging in -> Click "Settings" -> Click "Developer settings" -> 
+   Click "Personal access tokens" -> Click "Generate new token"
 
-    You should see the app running. This will stay running as it is the way the Raspberry Pi listens for requests to change the state of the pins.
-    Now open another tab in terminal and SSH back into the RPi. Navigate again to the pi_project folder and run the requestscript.py file by passing the pin ID and 
-    the new state of the pin as arguments in terminal. The requestscript.py script is a simple patch request that updates a LED pin's state. For this, we need the 
-    pin ID and the pin's new state. The format for the command should be: python3 requestscript.py \<pin id> \<new pin state>
+8. Set up AppDynamics policy and action.
     
-    Example format:
-    
-    ```python3 requestscript.py 1 on```
-    
-    This should turn on the red pin. To turn off, replace "on" with "off".
-
-8. Set up port forwarding on laptop/local machine. Open another terminal tab of your local machine, not the RPi. Run command:
-
-    ```ssh -Nf -L localhost:9999:localhost:5000 pi@<RPi IP address>```
-    
-    Now any request made to the local machine on port 9999 will be routed to the RPi on port 5000. Test by running requestscript.py on your local machine.
-    
-    **NOTE: In the script, you must change the URL to be 'http://localhost:9999/pins/' since the app is now listening on port 9999**
-    
-    You can now control the lights via requests on your laptop. In order to stop the SSH port forward, from your local machine run
-    
-    ```ps aux | grep ssh```
-    
-    Which will give you a list of SSH processes. Find the port forward process and it's ID, then use
-    
-    ```kill <id>```
+9. To update the LED pins, the RPi will be continuously running the checkHealth.py application as AppDynamics updates the syntheticHealth.txt file via policy 
+   triggers. On your RPi, navigate to pi_project on your RPi and run checkHealth.py via
+   
+   ```python3 checkHealth.py```
+   
+   Now the RPi will constantly checking the contents of your syntheticHealth.txt file and should update the LED pin state given the content of the file.
