@@ -49,8 +49,9 @@ Steps to reproduce:
    * Payload:
        * MIME Type: application/json
        * Content: 
-       
-{
+
+
+```{
   "message": "update syntheticHealth.txt from AppD",
   "committer": {
     "name": "<your name>",
@@ -58,7 +59,8 @@ Steps to reproduce:
   },
   "content": "MQ==",
   "sha": "<syntheticHealth.txt SHA>"
-}
+}```
+
 
     Note: The committer values will be your information linked to your GitHub account. The content value is the number 1 in Base64 code. The sha value should be the
     unique SHA identifier given to your syntheticHealth.txt file. This changes sometimes, but you can run the getSHA.py script provided in this repo to find it.
