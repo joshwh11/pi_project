@@ -59,13 +59,13 @@ Steps to reproduce:
   },
   "content": "MQ==",
   "sha": "<syntheticHealth.txt SHA>"
-}```
+}
+```
 
-
-    Note: The committer values will be your information linked to your GitHub account. The content value is the number 1 in Base64 code. The sha value should be the
-    unique SHA identifier given to your syntheticHealth.txt file. This changes sometimes, but you can run the getSHA.py script provided in this repo to find it.
+   The committer values will be your information linked to your GitHub account. The content value is the number 1 in Base64 code. The sha value should be the
+   unique SHA identifier given to your syntheticHealth.txt file. This changes sometimes, but you can run the getSHA.py script provided in this repo to find it.
     
-    Save and test this HTTP Request Template.
+   Save and test this HTTP Request Template.
     
 9. To update the LED pins, the RPi will be continuously running the checkHealth.py application as AppDynamics updates the syntheticHealth.txt file via policy 
    triggers. On your RPi, navigate to pi_project and run checkHealth.py via:
