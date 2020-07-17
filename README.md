@@ -39,7 +39,33 @@ Steps to reproduce:
    file. To generate a token, click on the icon drop-down at the top right of GitHub page after logging in -> Click "Settings" -> Click "Developer settings" -> 
    Click "Personal access tokens" -> Click "Generate new token"
 
-8. Set up AppDynamics policy and action.
+8. Time to set up an AppDynamics HTTP request action. From the controller, navigate to the Alert & Respond tab, then to HTTP Request Templates, then create a new
+   template. 
+   
+   * Method: PUT
+   * Raw URL: https://<span></span>api.github.com/repos/\<your username\>/\<your repo\>/contents/syntheticHealth.txt
+   * Custom Request Header: 
+       * Authorization: token \<your token\>
+   * Payload:
+       * MIME Type: application/json
+       * Content: 
+       
+```
+{
+  "message": "update syntheticHealth.txt from AppD",
+  "committer": {
+    "name": "<your name>",
+    "email": "<your email>"
+  },
+  "content": "MQ==",
+  "sha": "<syntheticHealth.txt SHA>"
+}
+```
+
+    Note: The committer values will be your information linked to your GitHub account. The content value is the number 1 in Base64 code. The sha value should be the
+    unique SHA identifier given to your syntheticHealth.txt file. This changes sometimes, but you can run the getSHA.py script provided in this repo to find it.
+    
+    Save and test this HTTP Request Template.
     
 9. To update the LED pins, the RPi will be continuously running the checkHealth.py application as AppDynamics updates the syntheticHealth.txt file via policy 
    triggers. On your RPi, navigate to pi_project and run checkHealth.py via:
