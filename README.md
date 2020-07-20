@@ -17,7 +17,8 @@ Steps to reproduce:
 
     Note: JSON and Base64 might already be downloaded via the base Python. If you run into errors installing these, just ignore.
 
-4. Clone git repository to RPi:
+4. This repository includes schematics for your RPi, the script your RPi will run to update the LEDs, and some supplemental files. Clone this git repository to your
+   RPi using:
 
     ```git clone https://github.com/joshwh11/pi_project```
 
