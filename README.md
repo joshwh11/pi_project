@@ -56,10 +56,10 @@ Steps to reproduce:
     ```
     {
      "message": "update syntheticHealth.txt from AppD",
-    "committer": {
+     "committer": {
       "name": "<your name>",
       "email": "<your email>"
-    },
+     },
      "content": "MQ==",
      "sha": "<syntheticHealth.txt SHA>"
     }
