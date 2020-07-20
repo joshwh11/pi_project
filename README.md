@@ -7,12 +7,19 @@ Steps to reproduce:
 3. Download libraries to RPi:
 
      ```sudo apt update -y && sudo apt upgrade -y```
+     
      ```sudo apt install python3```
+     
      ```sudo apt install python3-pip```
+     
      ```sudo apt install git vim -y```
+     
      ```pip3 install RPi.GPIO```
+     
      ```pip3 install requests```
+     
      ```pip3 install json```
+     
      ```pip3 install base64```
 
     Note: JSON and Base64 might already be downloaded via the base Python.
