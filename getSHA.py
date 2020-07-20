@@ -1,7 +1,7 @@
 import json
 import requests
 
-# Configure url
+# UPDATE url
 url = "https://api.github.com/repos/<your username>/<your repo>/contents/syntheticHealth.txt"
 
 r = requests.get(url).text
