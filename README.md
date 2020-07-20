@@ -51,7 +51,7 @@ Steps to reproduce:
        * Authorization: token \<your token\>
    * Payload:
        * MIME Type: application/json
-       * Content: 
+       * Message (MAKE SURE TO CONFIGIRE WITH YOUR VALUES): 
 
 ```
 {
