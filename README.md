@@ -15,7 +15,7 @@ Steps to reproduce:
      * ```pip3 install json```
      * ```pip3 install base64```
 
-    Note: JSON and Base64 might already be downloaded via the base Python.
+    Note: JSON and Base64 might already be downloaded via the base Python. If you run into errors installing these, just ignore.
 
 4. Clone git repository to RPi:
 
