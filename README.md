@@ -37,7 +37,7 @@ Steps to reproduce:
     
     ```python3 ledtest.py```
     
-7. Now that the lights are working, let's set up a GitHub repository to hold the file that AppDynamics will update if a policy is triggered. Create an account if
+7. Now that the lights are working, let's set up a GitHub repository to hold the file that AppDynamics will update when a policy is triggered. Create an account if
    you do not already have one and create a repo with one file named "syntheticHealth.txt" that contains simply a 0. 0 will be the default "off" state of the LED. 
    If a policy is triggered, AppDynamics will update the file to a 1, or "on" state. Also, you will need a token to authenticate any request to update a GitHub 
    file. To generate a token, click on the icon drop-down at the top right of GitHub page after logging in -> Click "Settings" -> Click "Developer settings" -> 
