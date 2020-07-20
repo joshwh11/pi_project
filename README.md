@@ -47,7 +47,7 @@ Steps to reproduce:
    
    * Method: PUT
    * Raw URL: https://<span></span>api.github.com/repos/\<your username\>/\<your repo\>/contents/syntheticHealth.txt
-   * Custom Request Header: 
+   * Custom Request Header (everything before the colon goes in the left box, everything after goes in the right box): 
        * Authorization: token \<your token\>
    * Payload:
        * MIME Type: application/json
