@@ -2,28 +2,31 @@
 
 Steps to reproduce:
 
-1. Set up Raspberry Pi with headless Raspian
-2. SSH into RPi
+1. Set up Raspberry Pi with headless Raspian. There are lots of resources online to accomplish this.
+2. SSH into RPi.
 3. Download libraries to RPi:
 
-* ```sudo apt update -y && sudo apt upgrade -y```
-* ```sudo apt install python3```
-* ```sudo apt install python3-pip```
-* ```sudo apt install git vim -y```
-* ```pip3 install RPi.GPIO```
-* ```pip3 install requests```
-* ```pip3 install json```
-* ```pip3 install base64```
+    * ```sudo apt update -y && sudo apt upgrade -y```
+    * ```sudo apt install python3```
+    * ```sudo apt install python3-pip```
+    * ```sudo apt install git vim -y```
+    * ```pip3 install RPi.GPIO```
+    * ```pip3 install requests```
+    * ```pip3 install json```
+    * ```pip3 install base64```
+
+    Note: JSON and Base64 might already be downloaded via the base Python.
 
 4. Clone git repository to RPi:
 
     ```git clone https://github.com/joshwh11/pi_project```
 
 5. Set up breadboard with Raspberry Pi. Requires:
-* Breadboard
-* 3x Female-to-Male wires
-* 2x LED Pins (1 red, 1 yellow)
-* 2x 220Ω Resistors 
+
+    * Breadboard
+    * 3x Female-to-Male wires
+    * 2x LED Pins (1 red, 1 yellow)
+    * 2x 220Ω Resistors 
 
     (Super rough diagrams for reference are in the "schematic" folder)
 
