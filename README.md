@@ -82,3 +82,5 @@ Steps to reproduce:
    Now the RPi will constantly check the contents of your syntheticHealth.txt file hosted on your GitHub repo and will update the LED pin state given the content
    of the file. Test the app by running an HTTP request test from the AppDynamcis UI. Don't forget to check the SHA via getSHA.py and update the HTTP Request
    Template. You have to save and then reclick the template for the save to go through, then you can use the "test" button.
+   
+   GitHub has a limit for requests for each user, so make sure to turn off the app when you are not using it.
