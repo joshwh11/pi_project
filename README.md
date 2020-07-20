@@ -53,26 +53,26 @@ Steps to reproduce:
        * MIME Type: application/json
        * Message: 
 
-```
-{
-  "message": "update syntheticHealth.txt from AppD",
-  "committer": {
-    "name": "<your name>",
-    "email": "<your email>"
-  },
-  "content": "MQ==",
-  "sha": "<syntheticHealth.txt SHA>"
-}
-```
+    ```
+    {
+     "message": "update syntheticHealth.txt from AppD",
+    "committer": {
+      "name": "<your name>",
+      "email": "<your email>"
+    },
+     "content": "MQ==",
+     "sha": "<syntheticHealth.txt SHA>"
+    }
+    ```
 
-   8 (continued). The "committer" values will be your information linked to your GitHub account. The "content" value is the number 1 in Base64 code (Another request
-   template should be made with the same parameters, but replace MQ== with MA== for 0 in Base64. This will turn off the light.). The sha value should be the unique 
-   SHA identifier given to your syntheticHealth.txt file. This changes sometimes, but you can run the getSHA.py script provided in this repo to find it. Save and
-   test this HTTP Request Template.
+    The "committer" values will be your information linked to your GitHub account. The "content" value is the number 1 in Base64 code (Another request
+    template should be made with the same parameters, but replace MQ== with MA== for 0 in Base64. This will turn off the light.). The sha value should be the unique 
+    SHA identifier given to your syntheticHealth.txt file. This changes sometimes, but you can run the getSHA.py script provided in this repo to find it. Save and
+    test this HTTP Request Template.
    
-   Note: I went further personally and created a third request, one that passes "Mg==" as the content. This is Base64 for 2 and will turn on a second light.
-   Currently, if the text file contains a 2, the RPi will light a red light signifying a critical error. If the text file contains a 1, the RPi will light a 
-   yellow light signifying a warning. Finally, a 0 will turn off all lights. You can configure to include any number of lights and requests.
+    Note: I went further personally and created a third request, one that passes "Mg==" as the content. This is Base64 for 2 and will turn on a second light.
+    Currently, if the text file contains a 2, the RPi will light a red light signifying a critical error. If the text file contains a 1, the RPi will light a 
+    yellow light signifying a warning. Finally, a 0 will turn off all lights. You can configure to include any number of lights and requests.
     
 9. To update the LED pins, the RPi will be continuously running the checkHealth.py application as AppDynamics updates the syntheticHealth.txt file via policy 
    triggers. On your RPi, navigate to pi_project, edit checkHealth.py to have your URL, then run checkHealth.py via:
