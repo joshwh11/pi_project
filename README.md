@@ -30,7 +30,7 @@ Steps to reproduce:
 
     (Super rough diagrams for reference are in the "schematic" folder)
 
-6. Test out pins by running the ledtest.py file after changing directory to the pi_project folder:
+6. Test out pins by running the ledtest.py file on your RPi after changing directory to the pi_project folder:
 
     ```cd pi_project```
     
