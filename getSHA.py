@@ -7,4 +7,4 @@ url = "https://api.github.com/repos/<your username>/<your repo>/contents/synthet
 r = requests.get(url).text
 rText = json.loads(r)
 filesha = str(rText["sha"])
-print(filesha)
+print("Your file's current SHA is: " + filesha)
