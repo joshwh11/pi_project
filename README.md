@@ -43,7 +43,7 @@ Steps to reproduce:
    Click "Personal access tokens" -> Click "Generate new token"
 
 8. Time to set up an AppDynamics HTTP request action. From the controller, navigate to the Alert & Respond tab, then to HTTP Request Templates, then create a new
-   template. 
+   template. Fill in the template like this and MAKE SURE TO READ CAREFULLY AND CONFIGURE WITH YOUR VALUES.
    
    * Method: PUT
    * Raw URL: https://<span></span>api.github.com/repos/\<your username\>/\<your repo\>/contents/syntheticHealth.txt
@@ -51,7 +51,7 @@ Steps to reproduce:
        * Authorization: token \<your token\>
    * Payload:
        * MIME Type: application/json
-       * Message (MAKE SURE TO CONFIGIRE WITH YOUR VALUES): 
+       * Message: 
 
 ```
 {
