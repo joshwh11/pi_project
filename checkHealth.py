@@ -8,19 +8,26 @@ import time
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 GPIO.setup(18,GPIO.OUT)
+GPIO.setup(24,GPIO.OUT)
 
-# Define url with your values
+# UPDATE:
 url = "https://api.github.com/repos/<your username>/<your repo>/contents/syntheticHealth.txt"
 
-# Get certain file content
-print("Application running... to stop type control-C :)")
+#Get certain file content
+print("Application running... to stop type control-C")
 while True:
     r = requests.get(url).text
     a = json.loads(r)
-    filesha = str(a['sha'])
 
-    if str(base64.b64decode(a["content"]))[2] == "1":
+    if str(base64.b64decode(a["content"]))[2] == "2":
         GPIO.output(18,GPIO.HIGH)
-    elif str(base64.b64decode(a["content"]))[2] == "0":
+        GPIO.output(24,GPIO.LOW)
+        print("Critical error")
+    elif str(base64.b64decode(a["content"]))[2] == "1":
+        GPIO.output(24,GPIO.HIGH)
         GPIO.output(18,GPIO.LOW)
-    time.sleep(5)
+        print("Warning")
+    elif str(base64.b64decode(a["content"]))[2] == "0":
+        GPIO.output(24,GPIO.LOW)
+        GPIO.output(18,GPIO.LOW)
+    time.sleep(10)
