@@ -29,7 +29,8 @@ Steps to reproduce:
     * 2x LED Pins (1 red, 1 yellow)
     * 2x 220Ω Resistors 
 
-    (Super rough diagrams for reference are in the "schematic" folder)
+    Super rough diagrams for reference are in the "schematic" folder. If you are going for a single light approach, then 2x FTM wires, 1 LED pin, and 1 resistor 
+    is needed. Just ignore one of the lights and its connections when you are setting up the breadboard.
 
 6. Test out pins by running the ledtest.py file on your RPi after changing directory to the pi_project folder:
 
@@ -39,7 +40,7 @@ Steps to reproduce:
     
 7. Now that the lights are working, let's set up a GitHub repository to hold the file that AppDynamics will update when a policy is triggered. Create an account if
    you do not already have one and create a repo with one file named "syntheticHealth.txt" that contains simply a 0 (0 will be the default "off" state of the LED). 
-   If a policy is triggered, AppDynamics will update the file to a 1, or "on" state. 
+   If a policy is triggered, AppDynamics will update the file to a 1, or "on" state for one of the pins.
    
    Also, you will need a token to authenticate any request to update a GitHub file. To generate a token, click on the icon drop-down at the top right of GitHub page 
    after logging in -> Click "Settings" -> Click "Developer settings" -> Click "Personal access tokens" -> Click "Generate new token"
@@ -73,8 +74,8 @@ Steps to reproduce:
     test this HTTP Request Template.
    
     Note: I went further personally and created a third request, one that passes "Mg==" as the content. This is Base64 for 2 and will turn on a second light.
-    Currently, if the text file contains a 2, the RPi will light a red light signifying a critical error. If the text file contains a 1, the RPi will light a 
-    yellow light signifying a warning. Finally, a 0 will turn off all lights. You can configure to include any number of lights and requests.
+    Currently, if the text file contains a 2, the RPi app will turn on the red light signifying a critical error. If the text file contains a 1, the RPi will light
+    a yellow light signifying a warning. Finally, a 0 will turn off all lights. You can configure to include any number of lights and requests.
     
 9. To update the LED pins, the RPi will be continuously running the checkHealth.py application as AppDynamics updates the syntheticHealth.txt file via policy 
    triggers. On your RPi, navigate to pi_project, edit checkHealth.py to have your URL, then run checkHealth.py via:
