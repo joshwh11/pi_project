@@ -22,7 +22,7 @@ Steps to reproduce:
 
     ```git clone https://github.com/joshwh11/pi_project```
 
-5. Set up breadboard with Raspberry Pi. Requires:
+5. Set up breadboard circuit with Raspberry Pi. Requires:
 
     * Breadboard
     * 3x Female-to-Male wires
