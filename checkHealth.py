@@ -30,4 +30,5 @@ while True:
     elif str(base64.b64decode(a["content"]))[2] == "0":
         GPIO.output(24,GPIO.LOW)
         GPIO.output(18,GPIO.LOW)
+        
     time.sleep(10)
