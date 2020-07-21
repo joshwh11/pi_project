@@ -86,3 +86,5 @@ Steps to reproduce:
    Template. You have to save and then reclick the template for the save to go through, then you can use the "test" button.
    
    GitHub has a limit for requests for each user, so make sure to turn off the app when you are not using it.
+   
+   ledtest.py can be used to reset the LEDs when needed.
