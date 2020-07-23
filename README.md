@@ -35,7 +35,7 @@ change up via the checkHealth.py script, which in turn will turn on/off LED pins
     * 2x LED Pins (1 red, 1 yellow)
     * 2x 220Ω Resistors 
 
-    Super rough diagrams for reference are in the "schematic" folder. If you are going for a single light approach, then 2x FTM wires, 1 LED pin, and 1 resistor 
+    Super rough diagrams for reference are in the "schematic" folder. If you are going for a single light approach, then 2x FTM wires, 1x LED pin, and 1x resistor 
     is needed. Just ignore one of the lights and its connections when you are setting up the breadboard.
 
 6. Test out pins by running the ledtest.py file on your RPi after changing directory to the pi_project folder:
