@@ -1,6 +1,12 @@
 # pi_project
 
-Steps to reproduce:
+### Summary:
+
+Simple project that correlates the AppDynamics Controller, a Raspberry Pi w/ circuit, and GitHub API to give you a physical alert when a health rule is violated in
+AppD (we used synthetic job health as the policy). AppDynamics will send a HTTP request via GitHub API, updating a file in a repo. The Raspberry Pi will pick this
+change up via the checkHealth.py script, which in turn will turn on/off LED pins on the circuit depending on what the GitHub file is populated with.
+
+### Steps to reproduce:
 
 1. Set up Raspberry Pi with headless Raspian. There are lots of resources online to accomplish this.
 2. SSH into RPi.
