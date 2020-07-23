@@ -92,6 +92,6 @@ change up via the checkHealth.py script, which in turn will turn on/off LED pins
    of the file. Test the app by running an HTTP request test from the AppDynamcis UI. Don't forget to check the SHA via getSHA.py and update the HTTP Request
    Template. You have to save and then reclick the template for the save to go through, then you can use the "test" button.
    
-   GitHub has a limit for requests for each user, so make sure to turn off the app when you are not using it.
+   GitHub has a limited number of requests for each user, so make sure to close out the checkHealth.py script when you are not using it.
    
-   ledtest.py can be used to reset the LEDs when needed.
+   ledTest.py can be used to reset the LEDs when needed.
