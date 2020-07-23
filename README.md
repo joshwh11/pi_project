@@ -38,11 +38,11 @@ change up via the checkHealth.py script, which in turn will turn on/off LED pins
     Super rough diagrams for reference are in the "schematic" folder. If you are going for a single light approach, then 2x FTM wires, 1x LED pin, and 1x resistor 
     is needed. Just ignore one of the lights and its connections when you are setting up the breadboard.
 
-6. Test out pins by running the ledtest.py file on your RPi after changing directory to the pi_project folder:
+6. Test out pins by running the ledTest.py file on your RPi after changing directory to the pi_project folder:
 
     ```cd pi_project```
     
-    ```python3 ledtest.py```
+    ```python3 ledTest.py```
     
 7. Now that the lights are working, let's set up a GitHub repository to hold the file that AppDynamics will update when a policy is triggered. Create an account if
    you do not already have one and create a repo with one file named "syntheticHealth.txt" that contains simply a 0 (0 will be the default "off" state of the LED). 
