@@ -1,4 +1,4 @@
-# pi_project
+# Raspberry Pi Notification for AppD Health Rule
 
 ### Summary:
 
